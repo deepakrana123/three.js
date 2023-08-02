@@ -16,11 +16,12 @@ html {
 }
 
 .app {
-  @apply relative w-full h-screen overflow-hidden;
+  @apply  w-full h-screen overflow-hidden left-0;
 }
+ 
 
-.home {
-  @apply w-fit xl:h-full flex xl:justify-between justify-start items-start flex-col xl:py-8 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
+ .home {
+  @apply w-fit xl:h-full flex xl:justify-between justify-start items-start flex-col xl:py-4 xl:px-16 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
 }
 
 .home-content {
@@ -28,10 +29,10 @@ html {
 }
 
 .head-text {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
-}
+  @apply xl:text-[6rem] text-[4rem] xl:leading-[8rem] leading-[6rem] font-black text-black;
+} 
 
-.download-btn {
+/* .download-btn {
   @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
 }
 
@@ -89,4 +90,4 @@ input[type="file"] {
 
 .sketch-picker > div:nth-child(3) {
   display: none !important;
-}
+} */

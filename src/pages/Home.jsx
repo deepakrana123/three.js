@@ -6,6 +6,7 @@ import state from "../store";
 import { CustomButton } from '../components';
 const Home = () => {
     const snap=useSnapshot(state)
+    console.log(snap,snap.intro,"snap")
   return (
     <AnimatePresence>
         {snap.intro  && (
@@ -28,9 +29,9 @@ const Home = () => {
                             Create your unqiue and excuslive shirts with our brand new 3d customiztion tool
                             <strong> Unleash your imagination</strong> {" "} define your style
                         </p>
-                    </motion.div>
-                    <CustomButton type="filled" title="customize" handleClick={()=>snap.intro=false}
+                    <CustomButton type="filled" title="customize" handleClick={() => state.intro = false}
                     customStyles="w-fit py-2.5 px-4 font-bold text-sm"/>
+                    </motion.div>
 
                 </motion.div>
 
