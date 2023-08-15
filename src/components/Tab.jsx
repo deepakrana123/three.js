@@ -1,9 +1,34 @@
-import React from 'react'
+import React from "react";
+import { useSnapshot } from "valtio";
+import store from "../store";
+const Tab = ({  tab, handleClick, isFilterTab, isActiveTab }) => {
+  const snap = useSnapshot(store);
 
-const Tab = () => {
+  const activeStyle =
+    isFilterTab && isActiveTab
+      ? { backgroundColor: snap.color, opacity: 0.5 }
+      : {
+          backgroundColor: "transparent",
+          opacity: 1,
+        };
   return (
-    <div>Tab</div>
-  )
-}
+    <div
+      key={tab.name}
+      onClick={handleClick}
+      style={activeStyle}
+      className={`tab-btn ${
+        isFilterTab ? "rounded-full glassmorhism" : "rounded-4"
+      }`}
+    >
+      <img
+        src={tab.icon}
+        alt={tab.name}
+        className={`${
+          isFilterTab ? "w-2/3 h-2/3" : "w-11/12 h-11/12 object-contain"
+        }`}
+      />
+    </div>
+  );
+};
 
-export default Tab
+export default Tab;

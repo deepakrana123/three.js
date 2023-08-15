@@ -5,11 +5,10 @@ import { useSnapshot } from 'valtio';
 import state from "../store";
 import { CustomButton } from '../components';
 const Home = () => {
-    const snap=useSnapshot(state)
-    console.log(snap,snap.intro,"snap")
+  const snap=useSnapshot(state)
   return (
     <AnimatePresence>
-        {snap.intro  && (
+        {snap?.intro  && (
             <motion.section className='home' {...slideAnimation('left')}>
                 <motion.header {...slideAnimation('down')}>
                     <img 
